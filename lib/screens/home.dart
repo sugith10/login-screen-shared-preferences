@@ -10,46 +10,39 @@ class ScreenHome extends StatelessWidget {
   Widget build(BuildContext context) {
     var time = 0;
 
-    List<String> names = [
-      'Alice',
-      'Bob',
-      'Charlie',
-      'David',
-      'Eve',
-      'Frank',
-      'Grace',
-      'Hannah',
-      'Isaac',
-      'Jack',
-      'Katie',
-      'Liam',
-      'Mia',
-      'Noah',
-      'Olivia',
-      'Peter',
-      'Quinn',
-      'Rachel',
-      'Sam',
-      'Tina',
-      'Uma',
-      'Vera',
-      'Will',
-      'Xander',
-      'Yara',
-      'Zane',
-      'Nora',
-      'Oscar',
-      'Sophie',
-      'Rocky',
-      'Olivia',
-      'Peter',
-      'Quinn',
-      'Rachel',
-      'Sam',
-      'Tina',
-      'Uma',
-    ];
-    List<String> messages = [
+  List<String> names = [
+  'Aarav',
+  'Akshay',
+  'Aditi',
+  'Amit',
+  'Anjali',
+  'Arya',
+  'Bhavya',
+  'Chetan',
+  'Deepika',
+  'Dhruv',
+  'Divya',
+  'Gaurav',
+  'Ishita',
+  'Kavita',
+  'Krishna',
+  'Mehak',
+  'Neha',
+  'Preeti',
+  'Rahul',
+  'Rajesh',
+  'Riya',
+  'Sanjay',
+  'Sarita',
+  'Shreya',
+  'Suresh',
+  'Tanvi',
+  'Uma',
+  'Varun',
+  'Vidya',
+  'Vivek',
+];
+  List<String> messages = [
       'Hello!',
       'Good morning!',
     ];
@@ -57,7 +50,6 @@ class ScreenHome extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(253, 69, 244, 0),
           title: const Text('Home'),
           actions: [
             IconButton(
@@ -84,7 +76,7 @@ class ScreenHome extends StatelessWidget {
                 );
               },
               child: ListTile(
-                leading: CircleAvatar(
+                leading: const CircleAvatar(
                   backgroundImage: NetworkImage(
                     'https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?w=740',
                   ),
@@ -97,13 +89,12 @@ class ScreenHome extends StatelessWidget {
             );
           },
           separatorBuilder: (ctx, index) {
-            return Divider();
+            return const Divider();
           },
           itemCount: 27,
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          backgroundColor: Color.fromARGB(253, 69, 244, 0),
           child: Icon(Icons.add_comment),
         ),
       ),

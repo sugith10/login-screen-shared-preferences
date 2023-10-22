@@ -45,7 +45,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                         if (value == null || value.isEmpty) {
                           return 'Username cannot be empty';
                         }
-                        return null; // No error
+                        return null;
                       },
                     ),
                     const SizedBox(
@@ -66,23 +66,19 @@ class _ScreenLoginState extends State<ScreenLogin> {
                         if (value == null || value.isEmpty) {
                           return 'Password cannot be empty';
                         }
-                        return null; // No error
+                        return null;
                       },
                     ),
                     const SizedBox(
                       height: 18,
                     ),
-                    ElevatedButton.icon(
+                    ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           checkLogin(context);
                         }
                       },
-                      icon: const Icon(Icons.check),
-                      label: const Text('Login'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.pink,
-                      ),
+                      child: const Text('Login'),
                     )
                   ],
                 ),
@@ -95,14 +91,13 @@ class _ScreenLoginState extends State<ScreenLogin> {
             _count++;
             setState(() {
               if (_count % 2 == 0) {
-                backgroundColor = const Color.fromARGB(255, 211, 103, 70);
+                backgroundColor = Color.fromARGB(255, 145, 142, 141);
               } else {
-                backgroundColor = Color.fromARGB(255, 3, 164, 250);
+                backgroundColor = Color.fromARGB(255, 160, 187, 202);
               }
             });
           },
-          backgroundColor: Colors.amber,
-          child: Icon(Icons.account_tree),
+          child: const Icon(Icons.catching_pokemon),
         ),
       ),
     );
@@ -118,12 +113,6 @@ class _ScreenLoginState extends State<ScreenLogin> {
       Navigator.of(ctx).pushReplacement(
           MaterialPageRoute(builder: (ctx) => const ScreenHome()));
     } else {
-      // Here, you would typically perform your actual login logic.
-      // Check if the username and password are correct, and navigate
-      // to the next screen if they are.
-      // You might want to use Navigator for navigation.
-
-      // Show a Snackbar for a failed login attempt
       ScaffoldMessenger.of(ctx).showSnackBar(const SnackBar(
         content: Text('Login failed. Please check your credentials.'),
         behavior: SnackBarBehavior.floating,
