@@ -8,7 +8,7 @@ class ChatScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Name'), // Chat partner's name
+          title: Text('Name'),
         ),
         body: Column(
           children: [

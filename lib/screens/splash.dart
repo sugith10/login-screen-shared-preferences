@@ -19,12 +19,6 @@ class _ScreenSplashState extends State<ScreenSplash> {
   }
 
   @override
-  void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
-    super.didChangeDependencies();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -38,11 +32,6 @@ class _ScreenSplashState extends State<ScreenSplash> {
     );
   }
 
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-  }
 
   Future<void> gotoLogin() async {
     await Future.delayed(const Duration(seconds: 1));
@@ -63,4 +52,3 @@ class _ScreenSplashState extends State<ScreenSplash> {
     }
   }
 }
-//
